@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SCXList</title>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div id="warning-modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="modal-header">
+                <span>SCXList</span>
+                <button class="close-x" onclick="closeWarning(false)">×</button>
+            </div>
+            <div class="modal-body">
+                <p><span>Warning:</span> this revival is flagged as potentially unsafe or unverified. proceed at your own risk.</p>
+                <div class="modal-btns">
+                    <button class="m-btn confirm" onclick="closeWarning(true)">proceed</button>
+                    <button class="m-btn cancel" onclick="closeWarning(false)">cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="landing" class="view active">
+        <div class="center-box">
+            <img src="/SCX2_big.png" alt="SCX2" class="logo">
+            <h1>Welcome!</h1>
+            <p><span>SCX2 is an passion project by j5vz [ Nexus ]</span>. Established on 07/03/2026. This site was made to be a source on Roblox revivals, <span>you may refer to it as SCXList.</span></p>
+            <button onclick="enterSite()" class="enter-btn">View Content</button>
+        </div>
+    </div>
+
+    <div id="directory" class="view">
+        <div class="nav-tabs">
+            <button class="tab-link active" onclick="openTab(event, 'revivals')">Revivals</button>
+            <button class="tab-link" onclick="openTab(event, 'executors')">Executors</button>
+        </div>
+
+        <div id="revivals" class="tab-content active">
+            <p>Below is a list of ROBLOX revivals we gathered.</p>
+            <div class="item-list">
+                <a href="https://pekora.zip" class="item-card" onclick="showWarning(event)">
+                    Korone <span class="warning-tag">!! RAT !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=pekora.zip" class="favicon">
+                </a>
+                <a href="https://hexagon.pw" class="item-card" onclick="showWarning(event)">
+                    Hexagon <span class="warning-tag">!! WARNING !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=hexagon.pw" class="favicon">
+                </a>
+                <a href="https://ecsr.io" class="item-card">ECS:R <img src="https://www.google.com/s2/favicons?sz=128&domain=ecsr.io" class="favicon"></a>
+                <a href="https://synt2x.xyz" class="item-card" onclick="showWarning(event)">
+                    Syntax 2 <span class="warning-tag">!! RAT !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=synt2x.xyz" class="favicon">
+                </a>
+                <a href="https://watrbx.wtf" class="item-card">watrbx <img src="https://www.google.com/s2/favicons?sz=128&domain=watrbx.wtf" class="favicon"></a>
+                <a href="https://zakrev.com" class="item-card">Zakrev <img src="https://www.google.com/s2/favicons?sz=128&domain=zakrev.com" class="favicon"></a>
+                <a href="https://alphaland.cc" class="item-card">Alphaland <img src="https://www.google.com/s2/favicons?sz=128&domain=alphaland.cc" class="favicon"></a>
+                <a href="https://wawah.rocks" class="item-card">Wawah <img src="https://www.google.com/s2/favicons?sz=128&domain=wawah.rocks" class="favicon"></a>
+                <a href="https://web.subter.org" class="item-card" onclick="showWarning(event)">
+                    SUBTER <span class="warning-tag">!! WARNING !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=subter.org" class="favicon">
+                </a>
+                <a href="https://caelus.lol" class="item-card">Caelus <img src="https://www.google.com/s2/favicons?sz=128&domain=caelus.lol" class="favicon"></a>
+                <a href="https://rbxsec.xyz" class="item-card" onclick="showWarning(event)">
+                    Rbxsec <span class="warning-tag">!! WARNING !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=rbxsec.xyz" class="favicon">
+                </a>
+                <a href="https://goofer.top" class="item-card">Goofer <img src="https://www.google.com/s2/favicons?sz=128&domain=goofer.top" class="favicon"></a>
+                <a href="https://ec0sys.fun" class="item-card">Ecosys <img src="https://www.google.com/s2/favicons?sz=128&domain=ec0sys.fun" class="favicon"></a>
+                <a href="https://pnblox.xyz" class="item-card">PanalBlox <img src="https://www.google.com/s2/favicons?sz=128&domain=pnblox.xyz" class="favicon"></a>
+                <a href="https://lunarix.my" class="item-card">Lunarix <img src="https://www.google.com/s2/favicons?sz=128&domain=lunarix.my" class="favicon"></a>
+                <a href="https://austiblox.net" class="item-card">Austiblox <img src="https://www.google.com/s2/favicons?sz=128&domain=austiblox.net" class="favicon"></a>
+                <a href="https://evvls.site" class="item-card">Evvls <img src="https://www.google.com/s2/favicons?sz=128&domain=evvls.site" class="favicon"></a>
+                <a href="https://bloxxia.de" class="item-card">Bloxxia <img src="https://www.google.com/s2/favicons?sz=128&domain=bloxxia.de" class="favicon"></a>
+                <a href="https://kornet.lat" class="item-card">Kornet <img src="https://www.google.com/s2/favicons?sz=128&domain=kornet.lat" class="favicon"></a>
+                <a href="https://cartii.fit" class="item-card">Cartii <img src="https://www.google.com/s2/favicons?sz=128&domain=cartii.fit" class="favicon"></a>
+                <a href="https://xspy.dev" class="item-card" onclick="showWarning(event)">
+                    Xblox <span class="warning-tag">!! WARNING !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=xspy.dev" class="favicon">
+                </a>
+                <a href="https://strrev.com" class="item-card" onclick="showWarning(event)">
+                    Stratus <span class="warning-tag">!! WARNING !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=strrev.com" class="favicon">
+                </a>
+                <a href="https://lureon.fit" class="item-card">Carbon <img src="https://www.google.com/s2/favicons?sz=128&domain=lureon.fit" class="favicon"></a>
+                <a href="https://pricellium.dpdns.org" class="item-card">Pricellium <img src="https://www.google.com/s2/favicons?sz=128&domain=pricellium.dpdns.org" class="favicon"></a>
+                <a href="https://coolblox.net" class="item-card">Coolblox <img src="https://www.google.com/s2/favicons?sz=128&domain=coolblox.net" class="favicon"></a>
+                <a href="https://goodblox.net" class="item-card">Goodblox 2 <img src="https://www.google.com/s2/favicons?sz=128&domain=goodblox.net" class="favicon"></a>
+                <a href="https://polygon.pizzaboxer.fun" class="item-card">Polygon <img src="https://www.google.com/s2/favicons?sz=128&domain=pizzaboxer.fun" class="favicon"></a>
+                <a href="https://www.miikart.co" class="item-card">Zora <img src="https://www.google.com/s2/favicons?sz=128&domain=miikart.co" class="favicon"></a>
+                <a href="https://mercs.dev" class="item-card">Mercury 3 <img src="https://www.google.com/s2/favicons?sz=128&domain=mercs.dev" class="favicon"></a>
+                <a href="https://rolbox.lol" class="item-card">Aurora <img src="https://www.google.com/s2/favicons?sz=128&domain=rolbox.lol" class="favicon"></a>
+                <a href="https://projxe.xyz" class="item-card">Project Xenon <img src="https://www.google.com/s2/favicons?sz=128&domain=projxe.xyz" class="favicon"></a>
+                <a href="https://voltra.sbs" class="item-card" onclick="showWarning(event)">
+                    Voltra <span class="warning-tag">!! WARNING !!</span>
+                    <img src="https://www.google.com/s2/favicons?sz=128&domain=voltra.sbs" class="favicon">
+                </a>
+            </div>
+        </div>
+
+        <div id="executors" class="tab-content">
+            <div class="item-list">
+                <a href="https://files.catbox.moe/afrbgt.zip" class="item-card">Synapse X [ Scamnapse ] <img src="https://www.google.com/s2/favicons?sz=128&domain=catbox.moe" class="favicon"></a>
+                <a href="https://files.catbox.moe/cjbohv.dll" class="item-card">Prismatic <img src="https://www.google.com/s2/favicons?sz=128&domain=catbox.moe" class="favicon"></a>
+            </div>
+        </div>
+
+        <button onclick="exitSite()" class="back-link">Go Back</button>
+    </div>
+
+    <script>
+        let targetUrl = '';
+
+        function enterSite() {
+            document.getElementById('landing').classList.remove('active');
+            setTimeout(() => {
+                document.getElementById('landing').style.display = 'none';
+                document.getElementById('directory').style.display = 'flex';
+                setTimeout(() => document.getElementById('directory').classList.add('active'), 50);
+            }, 400);
+        }
+
+        function exitSite() {
+            document.getElementById('directory').classList.remove('active');
+            setTimeout(() => {
+                document.getElementById('directory').style.display = 'none';
+                document.getElementById('landing').style.display = 'flex';
+                setTimeout(() => document.getElementById('landing').classList.add('active'), 50);
+            }, 400);
+        }
+
+        function openTab(evt, tabName) {
+            let contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) contents[i].classList.remove("active");
+            let tabs = document.getElementsByClassName("tab-link");
+            for (let i = 0; i < tabs.length; i++) tabs[i].classList.remove("active");
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        function showWarning(e) {
+            e.preventDefault();
+            targetUrl = e.currentTarget.href;
+            document.getElementById('warning-modal').classList.add('open');
+        }
+
+        function closeWarning(confirm) {
+            document.getElementById('warning-modal').classList.remove('open');
+            if (confirm && targetUrl) window.open(targetUrl, '_blank');
+            targetUrl = '';
+        }
+    </script>
+</body>
+</html>
+
