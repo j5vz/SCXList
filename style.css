@@ -14,6 +14,48 @@ body {
     box-sizing: border-box;
 }
 
+/* ad containers woahhh */
+.banner-ads {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    height: 600px;
+    background: #080808;
+    border: 1px solid #111;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.banner-ads:hover {
+    border-color: #222;
+}
+
+.banner-left {
+    left: 20px;
+}
+
+.banner-right {
+    right: 20px;
+}
+
+.banner-ads img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .banner-ads {
+        display: none;
+    }
+}
+
 @keyframes fadeScale {
     from { opacity: 0; transform: translate(-50%, -48%) scale(0.98); }
     to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
@@ -189,4 +231,3 @@ p span { color: #fff; }
 
 .back-link { margin-top: 40px; background: none; border: none; color: #333; cursor: pointer; font-size: 0.8rem; padding-bottom: 20px; }
 .back-link:hover { color: #666; }
-
