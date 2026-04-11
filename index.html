@@ -5,11 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>SCXList</title>
+    <style>
+        .banner-ads {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .banner-left { left: 20px; }
+        .banner-right { right: 20px; }
+        .banner-ads img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 1200px) {
+            .banner-ads { display: none; }
+        }
+    </style>
 </head>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 <body>
+    <div class="banner-ads banner-left">
+        <img src="adplaceholder1.png" alt="ad">
+    </div>
+
+    <div class="banner-ads banner-right">
+        <img src="adplaceholder2.png" alt="ad">
+    </div>
+
     <div class="bg-animation">
+        <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
@@ -66,9 +99,7 @@
                 <a href="https://zakrev.com" class="item-card">Zakrev <img src="https://www.google.com/s2/favicons?sz=128&domain=zakrev.com" class="favicon"></a>
                 <a href="https://alphaland.cc" class="item-card">Alphaland <img src="https://www.google.com/s2/favicons?sz=128&domain=alphaland.cc" class="favicon"></a>
                 <a href="https://wawah.rocks" class="item-card">Wawah <img src="https://www.google.com/s2/favicons?sz=128&domain=wawah.rocks" class="favicon"></a>
-                <a href="https://web.subter.org" class="item-card" onclick="showWarning(event)">
-                    SUBTER <span class="warning-tag">!! WARNING !!</span>
-                    <img src="https://www.google.com/s2/favicons?sz=128&domain=subter.org" class="favicon">
+                <a href="https://web.subter.org" class="item-card">SUBTER <img src="https://www.google.com/s2/favicons?sz=128&domain=subter.org" class="favicon"></a>
                 </a>
                 <a href="https://caelus.lol" class="item-card">Caelus <img src="https://www.google.com/s2/favicons?sz=128&domain=caelus.lol" class="favicon"></a>
                 <a href="https://rbxsec.xyz" class="item-card" onclick="showWarning(event)">
@@ -116,6 +147,7 @@
         </div>
 
         <button onclick="exitSite()" class="back-link">Go Back</button>
+        <p>SCXList is owned by j5vz & the SCX2 team. Any other person claiming to own SCXList is false.</p>
     </div>
 
     <script>
@@ -162,4 +194,3 @@
     </script>
 </body>
 </html>
-
