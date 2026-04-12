@@ -95,7 +95,8 @@ body {
 .modal-window {
     background: #080808;
     border: 1px solid #222;
-    width: 7500px;
+    /* fuck ts */
+    width: 750px;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
