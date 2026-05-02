@@ -1,3 +1,7 @@
+# Hey, just so you guys know: the security on this is absolute DOGSHIT. Why is an revival searching for Arceus X or KRNL???
+# Anyways, that's it from my comments. Archive this, spread this, do whatever you want with their shitty bootstrapper.
+# –NX
+
 global discord_rpc
 global status_window
 global launcher_mutex
